@@ -23,13 +23,6 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s:%(levelname)s:%(message)s"
     )
-class wmark:
-  caption = 'jawafess'
-  img = Image.open('temp2.jpg')
-  d = ImageDraw.Draw(img)
-  font = ImageFont.truetype('upakarti.ttf', size=40)
-  d.text((60, 60), caption, fill='green', font=font, spacing=3, align='center', stroke_width=3, stroke_fill='white')
-  img.save('temp2.jpg')
 
 class TwitterBot:
 
@@ -43,7 +36,7 @@ class TwitterBot:
     self.checked = checked #number of dm checked
     self.notsent = notsent #number of incoming dm not sent
     self.dms = dms
-    self.watermark = wmark
+
 
 
 
