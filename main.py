@@ -156,7 +156,7 @@ class TwitterBot:
       message = {'sent': 'Asek tweetmu wes dikirim lur, monggo dipun pirsani '+rttime.astimezone(timezone(timedelta(hours=config.timezone))).strftime("%Y-%m-%d %H:%M")+' WIB.'+url}
     elif status == 'notsent':
       message = {'notsent' : 'sepurane durung kekirim lur, nganggo '+config.trigger+' ben kekirim.'}
-    else: message = {'wrong attachment' : 'Post was not sent. Send only picture attachment (not gif/video).'}
+    else: message = {'wrong attachment' : 'hanya bisa kirim foto (bukan gif/video).'}
 
     notifdm = api.send_direct_message(recipient_id=dmsender, text=message[status])
     #api.destroy_direct_message(int(notifdm.id))
